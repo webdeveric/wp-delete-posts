@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React from 'react';
 import { delay, sectostr } from './helpers';
 import ProgressBar from './ProgressBar';
