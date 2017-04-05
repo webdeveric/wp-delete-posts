@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "webdeveric",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react"
+  ]
+}

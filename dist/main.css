@@ -1,0 +1,54 @@
+.progress-bar-component {
+  font-weight: bold;
+  color: #666;
+  font-size: .8em; }
+  .progress-bar-component .progress-bar {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(bottom, #FFF 0%, #F0F0F0 100%);
+    background: linear-gradient(0deg, #FFF 0%, #F0F0F0 100%); }
+    .progress-bar-component .progress-bar::-moz-progress-bar {
+      background: linear-gradient(45deg, #0AF 0%, #0DF 50%, #0AF 100%);
+      border-radius: 3px; }
+  .progress-bar-component .duration:not(:empty):before {
+    content: 'Duration: '; }
+  .progress-bar-component .time-remaining {
+    float: right; }
+    .progress-bar-component .time-remaining:not(:empty):after {
+      content: ' remaining'; }
+#delete-posts-app label {
+  display: block;
+  margin: 0 0 .5em; }
+
+#delete-posts-app textarea {
+  font-size: .9em; }
+
+#delete-posts-app .form-section {
+  position: relative;
+  margin: 0 0 1em; }
+  #delete-posts-app .form-section:last-of-type {
+    margin-bottom: 0; }
+
+#delete-posts-app .inline-section {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1em; }
+  #delete-posts-app .inline-section:last-child {
+    margin-right: 0; }
+
+#delete-posts-app .urls {
+  width: 100%;
+  height: 300px;
+  resize: vertical;
+  padding: .75em; }
+
+/*# sourceMappingURL=main.css.map*/
