@@ -19,16 +19,7 @@ const POST_DOES_NOT_EXIST = 'does not exist';
 const NOT_ALLOWED_TO_DELETE = 'not allowed';
 const POST_DELETED = 'deleted';
 const POST_NOT_DELETED = 'not deleted';
-
-function getIP()
-{
-    return $_SERVER['REMOTE_ADDR'];
-}
-
-function getNonceAction()
-{
-    return 'delete-posts-by-url-' . getIP();
-}
+const DELETE_POST_NONCE_ACTION = 'delete-posts-by-url';
 
 function adminStyles()
 {
@@ -40,7 +31,7 @@ function adminScripts()
     \wp_register_script('delete-posts', plugins_url('/dist/main.js', __FILE__ ), [], DELETE_POSTS_VERSION, true);
 
     \wp_localize_script('delete-posts', 'deletePosts', [
-        'nonce' => \wp_create_nonce( getNonceAction() ),
+        'nonce' => \wp_create_nonce( DELETE_POST_NONCE_ACTION ),
         'status' => [
             'POST_DOES_NOT_EXIST' => POST_DOES_NOT_EXIST,
             'NOT_ALLOWED_TO_DELETE' => NOT_ALLOWED_TO_DELETE,
@@ -85,7 +76,7 @@ function adminMenu()
 
 function ajaxDeletePostByURL()
 {
-    if ( ! \check_ajax_referer( getNonceAction(), 'nonce', false ) ) {
+    if ( ! \check_ajax_referer( DELETE_POST_NONCE_ACTION, 'nonce', false ) ) {
 
         \wp_send_json_error( [ 'message' => 'nonce is invalid' ], 403 );
 
