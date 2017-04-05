@@ -2,6 +2,7 @@
   "name": "webdeveric/wp-delete-posts",
   "description": "Delete WordPress posts by URL",
   "type": "wordpress-plugin",
+  "license": "proprietary",
   "authors": [
     {
       "name": "Eric King",

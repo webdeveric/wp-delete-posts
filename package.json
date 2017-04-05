@@ -2,7 +2,7 @@
   "name": "@webdeveric/wp-delete-posts",
   "version": "1.0.0",
   "description": "Delete WordPress posts by URL",
-  "license": "proprietary",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/webdeveric/wp-delete-posts.git"
